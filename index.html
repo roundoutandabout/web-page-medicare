@@ -3,46 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
-	<link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
-		<div class="header-content">
-		<h1>Medicare</h1>
-		<div class="container">
-			<div class="logo"><a href="" alt="logo"></a></div>
-			<div class="row">
-				<div class="two columns">Поиск лечения </div>
-				<div class="two columns">Советы</div>
-				<div class="two columns">О нас</div>
-				<div class="two columns">О нас</div>
-			</div>
-			<div class="search"></div>
-		</div>
-		</div>
+		<nav>
+			<ul class="topnav" id="myTopnav">
+				<li><span>Medicare</span></li>
+				<li><a href="#home" class="drop-down">Поиск лечения</a>
+					<ul>
+						<li>по странам</li>
+						<li><a href="germany">Германия</a></li>
+						<li><a href="israel">Израиль</a></li>
+						<li><a href="corea">Корея</a></li>
+						<li><a href="spain">Испания</a></li>
+						<li><a href="all-countries">Все страны</a></li>
+					</ul>
+					<ul>
+						<p>по направлениям</p>
+						<li><a href="onco">Онкология</a></li>
+						<li><a href="plastic-chirurgy">Пластическая хирургия</a></li>
+						<li><a href="ortopedia">Ортопедия</a></li>
+						<li><a href="cardiology">Кардиология</a></li>
+						<li><a href="all-types">Все направления</a></li>
+					</ul>
+				</li>
+				<li><a href="#news">Советы</a></li>
+				<li><a href="#contact">О нас</a></li>
+				<li><a href="#about">О нас</a></li>
+				<li class="search-icon"><a href="#search">&#128269;</a></li>
+				<li class="menu-icon">
+					<a href="#" onclick="toggleMenu()">&#9776;</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
-	<div class="banner">
-		<div class="container">
-			<h1>Medicare Blog — актуально про здоровье.</h1>
-			<span class="popular-paragraphs">ПОПУЛЯРНЫЕ РАЗДЕЛЫ:</span>
-			<div class="container">
-				<div class="row">
-					<div class="three columns"><a href="#" class="button button-primary">ОНКОЛОГИЯ</a></div>
-					<div class="three columns"><a href="#" class="button button-primary">КОСМЕТОЛОГИЯ</a></div>
-					<div class="three columns"><a href="#" class="button button-primary">ОРТОПЕДИЯ</a></div>
-					<div class="three columns"><a href="#" class="button button-primary">СТОМАТОЛОГИЯ</a></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="six columns"><a href="#" class="button button-primary">ПЛАСТИЧЕСКАЯ ХИРУРГИЯ</a></div>
-					<div class="six columns"><a href="#" class="button button-primary">КАРДИОЛОГИЯ</a></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+	<script>
+		function toggleMenu() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 </body>
 </html>

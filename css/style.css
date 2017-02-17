@@ -1,3 +1,93 @@
-.header-content {
-  height: 80px;
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00BEAE;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a, ul.topnav li span {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+li.search-icon {
+  float: right;
+  display: inline-block;
+}
+
+ul li a:hover {
+  background-color: #333;
+}
+
+ul li.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.menu-icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+nav ul ul {
+  background-color: white;
+  display: none;
+  position: absolute;
+  top: 58px;
+}
+
+nav ul ul a {
+  color: black;
+}
+
+nav ul ul li a:hover {
+  background-color: #ECECEC;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
 }
