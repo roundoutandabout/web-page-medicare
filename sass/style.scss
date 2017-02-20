@@ -27,7 +27,17 @@ nav ul li {
 }
 
 nav ul li.search-icon {
+	position: relative;
 	float: right;
+	top: 20px;
+	
+	a {
+		background-image: url('../img/search-icon.png') ;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		width: 18px;
+		height: 18px;
+	}
 }
 
 nav ul li a:hover {
@@ -64,14 +74,20 @@ nav a, nav span {
 
 nav ul ul {
   display: inline-block;
-  position: absolute;
   top: $menu-hight;
+  padding-top: 20px;
+}
+
+div.container {
+  display: none;
+  position: absolute;
+  top: ($menu-hight);
 }
 
 nav ul ul li {
 	display: block;
-  width: 170px;
-  float: none;
+	width: 270px;
+	float: none;
 }
 
 nav ul ul a {
@@ -84,7 +100,9 @@ nav ul ul li a:hover {
 
 /* ------------ Second level menu END ------------ */
 
-nav ul li:hover > ul { display: inherit; }
+
+
+div.container-visible { display: inherit; }
 
 li > a:after {
     content: ' +';
@@ -101,25 +119,30 @@ ul li.menu-icon {display: none;}
 		display: none;
 	}
 	
+	
+	
 	ul li.menu-icon, ul li.search-icon {
 		display: inline-block;
 		float: right;
   }
 }
 
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.menu-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  ul.topnav.responsive {
+	  
+	li.menu-icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	  }
+	
   }
+  
   ul.topnav.responsive li {
     float: none;
     display: inline;
   }
+  
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
   }
-}

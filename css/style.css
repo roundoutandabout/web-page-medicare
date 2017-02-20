@@ -27,7 +27,17 @@ nav ul li {
 }
 
 nav ul li.search-icon {
+  position: relative;
   float: right;
+  top: 20px;
+}
+
+nav ul li.search-icon a {
+  background-image: url("../img/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 18px;
+  height: 18px;
 }
 
 nav ul li a:hover {
@@ -64,13 +74,19 @@ nav a, nav span {
 /* ------------ Second level menu ------------ */
 nav ul ul {
   display: inline-block;
+  top: 60px;
+  padding-top: 20px;
+}
+
+div.container {
+  display: none;
   position: absolute;
   top: 60px;
 }
 
 nav ul ul li {
   display: block;
-  width: 170px;
+  width: 270px;
   float: none;
 }
 
@@ -83,7 +99,7 @@ nav ul ul li a:hover {
 }
 
 /* ------------ Second level menu END ------------ */
-nav ul li:hover > ul {
+div.container-visible {
   display: inherit;
 }
 
@@ -109,21 +125,18 @@ ul li.menu-icon {
   }
 }
 
-@media screen and (max-width: 680px) {
-  ul.topnav.responsive {
-    position: relative;
-  }
-  ul.topnav.responsive li.menu-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
+ul.topnav.responsive li.menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+ul.topnav.responsive li {
+  float: none;
+  display: inline;
+}
+
+ul.topnav.responsive li a {
+  display: block;
+  text-align: left;
 }

@@ -1,0 +1,16 @@
+ul {
+  display: inline-block;
+  position: absolute;
+  width: 700px;
+  top: $menu-hight;
+}
+
+ul li {
+	display: block;
+	width: 270px;
+	float: none;
+}
+
+ul ul a {
+	color: black;
+}
