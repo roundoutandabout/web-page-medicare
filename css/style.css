@@ -142,7 +142,7 @@ ul.topnav.responsive li > a:after {
 }
 
 ul.topnav.responsive li.menu-icon, ul.topnav.responsive li.search-icon {
-  position: absolute;
+  /*position: absolute;*/
   float: right;
 }
 
@@ -155,15 +155,7 @@ ul.topnav.responsive li.menu-icon a {
   width: 18px;
 }
 
-ul.topnav.responsive li.menu-icon .container {
-  position: absolute;
-  display: inline-block;
-  left: 0px;
-  top: 70px;
-}
-
 ul.topnav.responsive li.search-icon {
-  right: 58px;
   top: 26px;
 }
 

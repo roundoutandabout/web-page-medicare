@@ -155,7 +155,7 @@ ul li.menu-icon {display: none;}
 	}
 	  
 	li.menu-icon, li.search-icon {
-		position: absolute;
+		/*position: absolute;*/
 		float: right;
 	  }
 	
@@ -168,18 +168,11 @@ ul li.menu-icon {display: none;}
 			width: 18px;
 		}
 		
-		.container {
-			position: absolute;
-			display: inline-block;
-			left: 0px;
-			top: $menu-height;
-		}
 	}
 	
 		
 	  
 	li.search-icon {
-		right: 58px;
 		top: (($menu-height)-18px)/2;
 	}
 
