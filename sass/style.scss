@@ -16,18 +16,18 @@ nav {
 		clear: both;
 	}
 	
-}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: realtive;
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: realtive;
-
-	li {
-		float: left;
-		display: inline-block;
+		li {
+			float: left;
+			display: inline-block;
+		}
 	}
+	
 }
 
 nav ul li.search-icon {
@@ -41,19 +41,15 @@ nav ul li.search-icon {
 		background-position: bottom center;
 		width: 18px;
 		height: 18px;
+		
+		&:hover {
+			background-color: inherit;
+		}
 	}
 }
 
 nav ul li a:hover {
 	background-color: #333;
-}
-
-nav ul li a:hover {
-	background-color: #333;
-}
-
-nav ul li.search-icon a:hover {
-	background-color: inherit;
 }
 
 nav a, nav span {
@@ -149,9 +145,6 @@ ul li.menu-icon {display: none;}
 			text-align: left;
 		}
 		
-		> a:after {
-		content: '';
-		}
 	}
 	  
 	li.menu-icon, li.search-icon {
@@ -168,9 +161,12 @@ ul li.menu-icon {display: none;}
 			width: 18px;
 		}
 		
+		.container {
+			display: block;
+		}
 	}
 	
-		
+	
 	  
 	li.search-icon {
 		top: (($menu-height)-18px)/2;

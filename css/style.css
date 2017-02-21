@@ -41,16 +41,12 @@ nav ul li.search-icon a {
   height: 18px;
 }
 
-nav ul li a:hover {
-  background-color: #333;
-}
-
-nav ul li a:hover {
-  background-color: #333;
-}
-
 nav ul li.search-icon a:hover {
   background-color: inherit;
+}
+
+nav ul li a:hover {
+  background-color: #333;
 }
 
 nav a, nav span {
@@ -137,10 +133,6 @@ ul.topnav.responsive li a {
   text-align: left;
 }
 
-ul.topnav.responsive li > a:after {
-  content: '';
-}
-
 ul.topnav.responsive li.menu-icon, ul.topnav.responsive li.search-icon {
   /*position: absolute;*/
   float: right;
@@ -153,6 +145,10 @@ ul.topnav.responsive li.menu-icon {
 
 ul.topnav.responsive li.menu-icon a {
   width: 18px;
+}
+
+ul.topnav.responsive li.menu-icon .container {
+  display: block;
 }
 
 ul.topnav.responsive li.search-icon {

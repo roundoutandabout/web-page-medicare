@@ -1,17 +1,27 @@
+/* nav is element to which 'responsive' class will be added */
+
 var nav = document.getElementById("myTopnav");
-				
-var lists = document.querySelector('.menu-desktop');
-	
+
+/* subMenuMobile is element that will be visible by clicking on item #dropDownMenu in nav bar*/
+
+var subMenuMobile = document.querySelector('.submenu-desktop');
+
+/*Makes visible element subMenuMobile when clicking on #dropDownMenu*/
+
 document.getElementById("dropDownMenu").onclick = function() {
-	toggleClass(lists, 'container-visible');
+	toggleClass(subMenuMobile, 'container-visible');
 }
-		
+
+/*closes desktop submenu when detecting clicks beyond #dropDownMenu item and beyond desktop submenu*/
+	
 document.onclick = function(e) {
 
-	if ((e.target != document.getElementById('dropDownMenu'))&&(e.target.closest('.menu-desktop') != lists)) {
-		removeClass(lists, 'container-visible');
+	if ((e.target != document.getElementById('dropDownMenu'))&&(e.target.closest('.submenu-desktop') != subMenuMobile)) {
+		removeClass(subMenuMobile, 'container-visible');
 	}
 }
+
+/* toggleClass() adds class (classToToggle) when it is abscent, and removes class when it is present in element x*/
 
 function toggleClass(x, classToToggle) {
 			//console.log(x.className.split(' '));
@@ -30,6 +40,8 @@ function toggleClass(x, classToToggle) {
 			}
 			//console.log(x);
 		}
+		
+/* removeClass() removes class (classToRemove) when it is present in element x*/
 		
 function removeClass(x, classToRemove) {
 	var classes = x.className.split(' ');
