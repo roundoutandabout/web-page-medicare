@@ -1,17 +1,21 @@
-$menu-hight: 60px;
+$menu-height: 70px;
 
-body {margin:0;}
+body {
+	background: #d5fafb; 
+	margin:0;
+}
 
 nav {
 	margin: 0;
 	padding: 0;
 	background-color: #00BEAE;
-}
 
-nav:after {
-  content: "";
-  display: table;
-  clear: both;
+	&:after { 
+		content: '';
+		display: table;
+		clear: both;
+	}
+	
 }
 
 nav ul {
@@ -19,17 +23,17 @@ nav ul {
 	margin: 0;
 	padding: 0;
 	position: realtive;
-}
 
-nav ul li {
-	float: left;
-	display: inline-block;
+	li {
+		float: left;
+		display: inline-block;
+	}
 }
 
 nav ul li.search-icon {
 	position: relative;
 	float: right;
-	top: 20px;
+	top: (($menu-height)-18px)/2;
 	
 	a {
 		background-image: url('../img/search-icon.png') ;
@@ -57,7 +61,7 @@ nav a, nav span {
 	padding: 0 20px;
 	color: #FFF;
 	font-size: 20px;
-	line-height: $menu-hight;
+	line-height: $menu-height;
 	text-decoration: none;
 	transition: 0.3s;
 }
@@ -74,14 +78,15 @@ nav a, nav span {
 
 nav ul ul {
   display: inline-block;
-  top: $menu-hight;
+  top: $menu-height;
   padding-top: 20px;
 }
 
 div.container {
-  display: none;
-  position: absolute;
-  top: ($menu-hight);
+	background: rgba(0, 0, 0, 0.1);
+	display: none;
+	position: absolute;
+	top: ($menu-height);
 }
 
 nav ul ul li {
@@ -114,35 +119,71 @@ li > a:only-child:after {
 
 ul li.menu-icon {display: none;}
 
+/* ------------- Media Queries -------------- */
+
 @media screen and (max-width:680px) {
 	ul li:not(:first-child) {
 		display: none;
 	}
 	
 	
-	
 	ul li.menu-icon, ul li.search-icon {
 		display: inline-block;
 		float: right;
-  }
+	}
+	
+	li > a:after {
+		content: '';
+	}
 }
+
+/* ------------- END Media Queries -------------- */
+
+/* ------------- Mobile Version -------------- */
 
   ul.topnav.responsive {
 	  
-	li.menu-icon {
+	li {
+		
+		a {
+			text-align: left;
+		}
+		
+		> a:after {
+		content: '';
+		}
+	}
+	  
+	li.menu-icon, li.search-icon {
 		position: absolute;
+		float: right;
+	  }
+	
+	li.menu-icon {
+		
 		right: 0;
 		top: 0;
-	  }
+		
+		a {
+			width: 18px;
+		}
+		
+		.container {
+			position: absolute;
+			display: inline-block;
+			left: 0px;
+			top: $menu-height;
+		}
+	}
+	
+		
+	  
+	li.search-icon {
+		right: 58px;
+		top: (($menu-height)-18px)/2;
+	}
+
 	
   }
   
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
+/* ------------- END Mobile Version -------------- */

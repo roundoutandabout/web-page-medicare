@@ -1,4 +1,5 @@
 body {
+  background: #d5fafb;
   margin: 0;
 }
 
@@ -9,7 +10,7 @@ nav {
 }
 
 nav:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -29,7 +30,7 @@ nav ul li {
 nav ul li.search-icon {
   position: relative;
   float: right;
-  top: 20px;
+  top: 26px;
 }
 
 nav ul li.search-icon a {
@@ -57,7 +58,7 @@ nav a, nav span {
   padding: 0 20px;
   color: #FFF;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 70px;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -74,14 +75,15 @@ nav a, nav span {
 /* ------------ Second level menu ------------ */
 nav ul ul {
   display: inline-block;
-  top: 60px;
+  top: 70px;
   padding-top: 20px;
 }
 
 div.container {
+  background: rgba(0, 0, 0, 0.1);
   display: none;
   position: absolute;
-  top: 60px;
+  top: 70px;
 }
 
 nav ul ul li {
@@ -115,6 +117,7 @@ ul li.menu-icon {
   display: none;
 }
 
+/* ------------- Media Queries -------------- */
 @media screen and (max-width: 680px) {
   ul li:not(:first-child) {
     display: none;
@@ -123,20 +126,45 @@ ul li.menu-icon {
     display: inline-block;
     float: right;
   }
+  li > a:after {
+    content: '';
+  }
+}
+
+/* ------------- END Media Queries -------------- */
+/* ------------- Mobile Version -------------- */
+ul.topnav.responsive li a {
+  text-align: left;
+}
+
+ul.topnav.responsive li > a:after {
+  content: '';
+}
+
+ul.topnav.responsive li.menu-icon, ul.topnav.responsive li.search-icon {
+  position: absolute;
+  float: right;
 }
 
 ul.topnav.responsive li.menu-icon {
-  position: absolute;
   right: 0;
   top: 0;
 }
 
-ul.topnav.responsive li {
-  float: none;
-  display: inline;
+ul.topnav.responsive li.menu-icon a {
+  width: 18px;
 }
 
-ul.topnav.responsive li a {
-  display: block;
-  text-align: left;
+ul.topnav.responsive li.menu-icon .container {
+  position: absolute;
+  display: inline-block;
+  left: 0px;
+  top: 70px;
 }
+
+ul.topnav.responsive li.search-icon {
+  right: 58px;
+  top: 26px;
+}
+
+/* ------------- END Mobile Version -------------- */
