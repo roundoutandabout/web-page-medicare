@@ -30,6 +30,7 @@ nav ul li {
 nav ul li.search-icon {
   position: relative;
   float: right;
+  padding-right: 1em;
   top: 26px;
 }
 
@@ -37,7 +38,6 @@ nav ul li.search-icon a {
   background-image: url("../img/search-icon.png");
   background-repeat: no-repeat;
   background-position: bottom center;
-  width: 18px;
   height: 18px;
 }
 
