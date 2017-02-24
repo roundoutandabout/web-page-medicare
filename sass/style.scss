@@ -1,4 +1,5 @@
 $menu-height: 70px;
+$brand-color: #00BEAE;
 
 body {
 	background: #d5fafb; 
@@ -8,7 +9,7 @@ body {
 nav {
 	margin: 0;
 	padding: 0;
-	background-color: #00BEAE;
+	background-color: $brand-color;
 
 	&:after { 
 		content: '';
@@ -20,11 +21,11 @@ nav {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		position: realtive;
 
 		li {
 			float: left;
 			display: inline-block;
+			position: relative;
 		}
 	}
 	
@@ -52,7 +53,7 @@ nav ul li a:hover {
 	background-color: #333;
 }
 
-nav a, nav span {
+nav a, span.site-title {
 	display: block;
 	padding: 0 20px;
 	color: #FFF;
@@ -60,9 +61,11 @@ nav a, nav span {
 	line-height: $menu-height;
 	text-decoration: none;
 	transition: 0.3s;
+	position: relative;
+	z-index: 5;
 }
 
-.site-title {
+span.site-title {
 	background-image: url('../img/Ellipse-1.png') ;
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -72,34 +75,81 @@ nav a, nav span {
 
 /* ------------ Second level menu ------------ */
 
-nav ul ul {
-  display: inline-block;
-  top: $menu-height;
-  padding-top: 20px;
-}
+/*nav ul ul {}*/ /*Selector for all sub-menus*/
 
 div.container {
-	background: rgba(0, 0, 0, 0.1);
+	
+	background: #ffffff;
 	display: none;
 	position: absolute;
+	width: 100%;
+	left: 0;
 	top: ($menu-height);
+	z-index: 3;
+	
+	ul {
+		display: inline-block;
+		top: $menu-height;
+		padding-top: 20px;
+		
+		li {
+			display: block;
+			width: 270px;
+			float: none;
+			margin-left: 50px;
+			
+			a {
+				color: black;
+				line-height: 50px;
+				
+				&:hover {
+					background-color: #ECECEC;
+				}
+			}
+			
+			&:first-child {
+				padding-top: 25px;
+				padding-bottom: 25px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			
+			&:last-child {
+				padding-top: 25px;
+				margin-bottom: 55px;
+				font-size: 20px;
+				font-weight: bold;
+				
+				a {
+					color: $brand-color;
+					
+					&:hover {
+						background-color: inherit;
+						color: ($brand-color) / 2;
+					}
+				}
+			}
+		}
+		
+		&:first-child {
+			margin-left: 130px;
+		}
+		
+	}
+	
 }
 
-nav ul ul li {
-	display: block;
-	width: 270px;
-	float: none;
+div.selection {
+	position: absolute;
+	z-index: 4;
+	top: 4px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(51, 51, 51, 0.12);
+	display: none;
 }
 
-nav ul ul a {
-	color: black;
-}
-
-nav ul ul li a:hover {
-	background-color: #ECECEC;
-}
-
-/* ------------ Second level menu END ------------ */
+/* ------------ END Second level menu ------------ */
 
 
 
@@ -118,7 +168,7 @@ ul li.menu-icon {display: none;}
 /* ------------- Media Queries -------------- */
 
 @media screen and (max-width:680px) {
-	ul li:not(:first-child) {
+	ul li:not(:first-child), ul .container {
 		display: none;
 	}
 	

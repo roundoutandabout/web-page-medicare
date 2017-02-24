@@ -5,11 +5,13 @@ var nav = document.getElementById("myTopnav");
 /* subMenuMobile is element that will be visible by clicking on item #dropDownMenu in nav bar*/
 
 var subMenuMobile = document.querySelector('.submenu-desktop');
+var selectionDiv = document.querySelector('.selection');
 
 /*Makes visible element subMenuMobile when clicking on #dropDownMenu*/
 
 document.getElementById("dropDownMenu").onclick = function() {
 	toggleClass(subMenuMobile, 'container-visible');
+	toggleClass(selectionDiv, 'container-visible');
 }
 
 /*closes desktop submenu when detecting clicks beyond #dropDownMenu item and beyond desktop submenu*/
