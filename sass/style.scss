@@ -79,13 +79,22 @@ span.site-title {
 
 div.container {
 	
-	background: #ffffff;
 	display: none;
 	position: absolute;
 	width: 100%;
 	left: 0;
 	top: ($menu-height);
 	z-index: 3;
+	
+	
+	
+}
+
+/* ------------ Desktop sub menu ------------ */
+
+div.submenu-desktop {
+
+	background: #ffffff;
 	
 	ul {
 		display: inline-block;
@@ -94,9 +103,9 @@ div.container {
 		
 		li {
 			display: block;
-			width: 270px;
+			min-width: 200px;
 			float: none;
-			margin-left: 50px;
+			margin-left: 30px;
 			
 			a {
 				color: black;
@@ -136,8 +145,47 @@ div.container {
 		}
 		
 	}
-	
 }
+
+/* ------------ END Desktop sub menu ------------ */
+
+/* ------------ Mobile sub menu ------------ */
+
+div.submenu-mobile {
+
+	background-color: #ECECEC;
+		
+	ul {
+		display: block;
+		top: $menu-height;
+		padding-top: 20px;
+		
+		li {
+			display: block;
+			float: none;
+			margin-left:  0px;
+			font-weight: bold;
+			
+			a {
+				color: black;
+				line-height: 50px;
+				
+				&:hover {
+					background-color: #ffffff;
+				}
+			}
+			
+		ul li a {
+			font-weight: normal;
+			padding-left: 60px;
+		}
+			
+		}
+		
+	}
+}
+
+/* ------------ END Mobile sub menu ------------ */
 
 div.selection {
 	position: absolute;
@@ -198,7 +246,6 @@ ul li.menu-icon {display: none;}
 	}
 	  
 	li.menu-icon, li.search-icon {
-		/*position: absolute;*/
 		float: right;
 	  }
 	
@@ -211,12 +258,11 @@ ul li.menu-icon {display: none;}
 			width: 18px;
 		}
 		
-		.container {
-			display: block;
-		}
 	}
 	
-	
+	.submenu-mobile {
+			display: block;
+		}
 	  
 	li.search-icon {
 		top: (($menu-height)-18px)/2;

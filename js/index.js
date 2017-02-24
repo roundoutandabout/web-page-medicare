@@ -2,15 +2,16 @@
 
 var nav = document.getElementById("myTopnav");
 
-/* subMenuMobile is element that will be visible by clicking on item #dropDownMenu in nav bar*/
+/* subMenuDesktop is element that will be visible by clicking on item #dropDownMenu in nav bar*/
 
-var subMenuMobile = document.querySelector('.submenu-desktop');
+var subMenuDesktop = document.querySelector('.submenu-desktop');
+var subMenuMobile = document.querySelector('.submenu-mobile');
 var selectionDiv = document.querySelector('.selection');
 
-/*Makes visible element subMenuMobile when clicking on #dropDownMenu*/
+/*Makes visible element subMenuDesktop when clicking on #dropDownMenu*/
 
 document.getElementById("dropDownMenu").onclick = function() {
-	toggleClass(subMenuMobile, 'container-visible');
+	toggleClass(subMenuDesktop, 'container-visible');
 	toggleClass(selectionDiv, 'container-visible');
 }
 
@@ -18,8 +19,8 @@ document.getElementById("dropDownMenu").onclick = function() {
 	
 document.onclick = function(e) {
 
-	if ((e.target != document.getElementById('dropDownMenu'))&&(e.target.closest('.submenu-desktop') != subMenuMobile)) {
-		removeClass(subMenuMobile, 'container-visible');
+	if ((e.target != document.getElementById('dropDownMenu'))&&(e.target.closest('.submenu-desktop') != subMenuDesktop)) {
+		removeClass(subMenuDesktop, 'container-visible');
 	}
 }
 

@@ -74,7 +74,6 @@ span.site-title {
 /*nav ul ul {}*/
 /*Selector for all sub-menus*/
 div.container {
-  background: #ffffff;
   display: none;
   position: absolute;
   width: 100%;
@@ -83,55 +82,94 @@ div.container {
   z-index: 3;
 }
 
-div.container ul {
+/* ------------ Desktop sub menu ------------ */
+div.submenu-desktop {
+  background: #ffffff;
+}
+
+div.submenu-desktop ul {
   display: inline-block;
   top: 70px;
   padding-top: 20px;
 }
 
-div.container ul li {
+div.submenu-desktop ul li {
   display: block;
-  width: 270px;
+  min-width: 200px;
   float: none;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
-div.container ul li a {
+div.submenu-desktop ul li a {
   color: black;
   line-height: 50px;
 }
 
-div.container ul li a:hover {
+div.submenu-desktop ul li a:hover {
   background-color: #ECECEC;
 }
 
-div.container ul li:first-child {
+div.submenu-desktop ul li:first-child {
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 20px;
   font-weight: bold;
 }
 
-div.container ul li:last-child {
+div.submenu-desktop ul li:last-child {
   padding-top: 25px;
   margin-bottom: 55px;
   font-size: 20px;
   font-weight: bold;
 }
 
-div.container ul li:last-child a {
+div.submenu-desktop ul li:last-child a {
   color: #00BEAE;
 }
 
-div.container ul li:last-child a:hover {
+div.submenu-desktop ul li:last-child a:hover {
   background-color: inherit;
   color: #005f57;
 }
 
-div.container ul:first-child {
+div.submenu-desktop ul:first-child {
   margin-left: 130px;
 }
 
+/* ------------ END Desktop sub menu ------------ */
+/* ------------ Mobile sub menu ------------ */
+div.submenu-mobile {
+  background-color: #ECECEC;
+}
+
+div.submenu-mobile ul {
+  display: block;
+  top: 70px;
+  padding-top: 20px;
+}
+
+div.submenu-mobile ul li {
+  display: block;
+  float: none;
+  margin-left: 0px;
+  font-weight: bold;
+}
+
+div.submenu-mobile ul li a {
+  color: black;
+  line-height: 50px;
+}
+
+div.submenu-mobile ul li a:hover {
+  background-color: #ffffff;
+}
+
+div.submenu-mobile ul li ul li a {
+  font-weight: normal;
+  padding-left: 60px;
+}
+
+/* ------------ END Mobile sub menu ------------ */
 div.selection {
   position: absolute;
   z-index: 4;
@@ -180,7 +218,6 @@ ul.topnav.responsive li a {
 }
 
 ul.topnav.responsive li.menu-icon, ul.topnav.responsive li.search-icon {
-  /*position: absolute;*/
   float: right;
 }
 
@@ -193,7 +230,7 @@ ul.topnav.responsive li.menu-icon a {
   width: 18px;
 }
 
-ul.topnav.responsive li.menu-icon .container {
+ul.topnav.responsive .submenu-mobile {
   display: block;
 }
 
