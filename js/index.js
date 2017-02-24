@@ -1,18 +1,24 @@
 /* nav is element to which 'responsive' class will be added */
 
-var nav = document.getElementById("myTopnav");
+//var nav = document.getElementById("myTopnav");
 
 /* subMenuDesktop is element that will be visible by clicking on item #dropDownMenu in nav bar*/
 
 var subMenuDesktop = document.querySelector('.submenu-desktop');
 var subMenuMobile = document.querySelector('.submenu-mobile');
-var selectionDiv = document.querySelector('.selection');
+var selectionBlock = document.querySelector('.selection');
 
 /*Makes visible element subMenuDesktop when clicking on #dropDownMenu*/
 
 document.getElementById("dropDownMenu").onclick = function() {
-	toggleClass(subMenuDesktop, 'container-visible');
-	toggleClass(selectionDiv, 'container-visible');
+	toggleClass(subMenuDesktop, 'visible-desktop');
+	toggleClass(selectionBlock, 'visible-desktop');
+}
+
+/*Makes visible element subMenuDesktop when clicking on #dropDownMobile*/
+
+document.getElementById("dropDownMobile").onclick = function() {
+	toggleClass(subMenuMobile, 'visible-mobile');
 }
 
 /*closes desktop submenu when detecting clicks beyond #dropDownMenu item and beyond desktop submenu*/
