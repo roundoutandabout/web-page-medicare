@@ -26,7 +26,12 @@ document.getElementById("dropDownMobile").onclick = function() {
 document.onclick = function(e) {
 
 	if ((e.target != document.getElementById('dropDownMenu'))&&(e.target.closest('.submenu-desktop') != subMenuDesktop)) {
-		removeClass(subMenuDesktop, 'container-visible');
+		removeClass(subMenuDesktop, 'visible-desktop');
+		removeClass(selectionBlock, 'visible-desktop');
+	}
+	
+	if ((e.target != document.getElementById('dropDownMobile'))&&(e.target.closest('.submenu-mobile') != subMenuMobile)) {
+		removeClass(subMenuMobile, 'visible-mobile');
 	}
 }
 

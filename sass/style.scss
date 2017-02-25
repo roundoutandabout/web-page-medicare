@@ -208,9 +208,9 @@ li > a:only-child:after {
 	content: '';
 }
 
-ul li.menu-icon, .mobile {display: none;}
-
 div.visible-desktop { display: inherit; }
+
+ul li.menu-icon, .mobile {display: none;}
 
 /* ------------- Media Queries -------------- */
 
