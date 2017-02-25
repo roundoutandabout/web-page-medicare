@@ -32,20 +32,32 @@ nav {
 }
 
 nav ul li.search-icon {
-	position: relative;
 	float: right;
-	top: (($menu-height)-18px)/2;
 	
 	a {
-		background-image: url('../img/search-icon.png') ;
+		background-image: url('../img/search-icon.svg') ;
 		background-repeat: no-repeat;
-		background-position: bottom center;
-		width: 18px;
-		height: 18px;
+		background-position: center center;
+		width: 20px;
+		height: 20px;
+		padding: 25px 20px;
 		
 		&:hover {
 			background-color: inherit;
 		}
+	}
+}
+
+nav ul li.menu-icon {
+	float: right;
+	
+	a {
+		background-image: url('../img/menu-icon.svg') ;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 20px;
+		height: 20px;
+		padding: 25px 20px;
 	}
 }
 
